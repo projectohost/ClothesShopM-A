@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #C9A96E; /* золото */
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #C9A96E;
+}
+
+.icons span {
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.hero {
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1520975916090-3105956dac38") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+}
+
+/* затемнення поверх фото */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  letter-spacing: 3px;
+  color: #C9A96E; /* золото */
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: 1px solid #C9A96E;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #C9A96E;
+  color: #000;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* контейнер */
+.store {
+  padding: 80px 10%;
+}
+
+/* заголовки */
+h2 {
+  font-size: 32px;
+  color: #C9A96E;
+  margin-bottom: 10px;
+}
+
+/* ===== LOCATION ===== */
+.location {
+  margin-bottom: 60px;
+}
+
+.location p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.map iframe {
+  border-radius: 10px;
+}
+
+/* ===== INTERIOR ===== */
+.interior {
+  margin-bottom: 60px;
+}
+
+.interior img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 0 20px rgba(201,169,110,0.2);
+}
+
+/* ===== REVIEWS ===== */
+.reviews {
+  margin-top: 40px;
+}
+
+.review-card {
+  background: #111;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-left: 3px solid #C9A96E;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.review-card:hover {
+  transform: translateX(5px);
+}
+
+.review-card p {
+  margin: 0 0 10px 0;
+  color: #ddd;
+}
+
+.review-card span {
+  color: #C9A96E;
+  font-size: 14px;
+}
