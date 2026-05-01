@@ -126,6 +126,11 @@ h2 {
 /* ===== LOCATION ===== */
 .location {
   margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .location p {
@@ -175,4 +180,55 @@ h2 {
 .review-card span {
   color: #C9A96E;
   font-size: 14px;
+}
+
+.map{
+  height: 200px;
+  display: flex;
+  /* align-items: center; */
+  position: relative;
+  /* justify-content: flex-start; */
+}
+
+@keyframes moveRight {
+    0%{
+      transform: none;
+      background-image: url('./without.png');
+    }
+    50%{
+      transform: translateX(300px);
+    }
+    85%{
+      
+    }
+    100%{
+      background-image: url('./with.png');
+      transform: none;
+    }
+}
+
+.character-logo {
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    top: 99px;
+    left: -260px;    
+
+    background-image: url('./without.png'); /* персонаж */
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    animation: 5s moveRight infinite cubic-bezier(.67,.09,.22,.84);
+}
+
+.store-logo {
+    width: 900px;
+    height: 200px;
+    position: absolute;
+    top: 12px;
+    left: -60px;
+
+    background-image: url('./store.png'); /* магазин */
+    background-size: contain;
+    background-repeat: no-repeat;
 }
