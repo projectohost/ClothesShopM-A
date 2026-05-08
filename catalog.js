@@ -1,52 +1,55 @@
-// Масив для кошика
+// Масив кошика
 let cart = [];
 
-// Оновлення кількості товарів у кошику
 function updateCart() {
-    console.log("Кошик:", cart);
+    console.log(cart);
 }
 
-// Кнопка "Купити зараз"
-const buyBtn = document.querySelector(".hero button");
+const products = [
+    {
+        name: "Футболка",
+        price: "799 грн",
+        image: "./molochko.jpeg"
+    },
+    {
+        name: "Худі",
+        price: "1488 грн",
+        image: "./milk.jpeg"
+    },
+    {
+        name: "Куртка",
+        price: "2499 грн",
+        image: "./nike milk.webp"
+    }
+];
 
-if (buyBtn) {
-    buyBtn.addEventListener("click", () => {
-        alert("Переходимо до покупок 🛍");
-    });
-}
+const grid = document.getElementById("productsGrid");
 
-// Кнопки "В кошик"
-const buttons = document.querySelectorAll(".card button");
+products.forEach(product => {
 
-buttons.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-        const productName = document.querySelectorAll(".card p")[index].innerText;
-        const productPrice = document.querySelectorAll(".card span")[index].innerText;
+    const card = document.createElement("div");
+    card.classList.add("card");
 
-        // Додаємо товар у кошик
+    card.innerHTML = `
+        <p>${product.name}</p>
+        <span>${product.price}</span>
+        <img src="${product.image}" alt="${product.name}">
+        <button>У кошик</button>
+    `;
+
+    const button = card.querySelector("button");
+
+    button.addEventListener("click", () => {
+
         cart.push({
-            name: productName,
-            price: productPrice
+            name: product.name,
+            price: product.price
         });
 
         updateCart();
-        alert(productName + " додано в кошик 🛒");
+
+        alert(product.name + " додано в кошик 🛒");
     });
+
+    grid.appendChild(card);
 });
-
-// Відкрити кошик (простий варіант через alert)
-const cartIcon = document.querySelector(".logo");
-
-if (cartIcon) {
-    cartIcon.addEventListener("click", () => {
-        if (cart.length === 0) {
-            alert("Кошик порожній");
-        } else {
-            let message = "Ваш кошик:\n";
-            cart.forEach(item => {
-                message += item.name + " - " + item.price + "\n";
-            });
-            alert(message);
-        }
-    });
-}
