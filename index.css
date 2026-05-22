@@ -159,6 +159,11 @@ h2 {
   margin-top: 40px;
 }
 
+.review-card img{
+  width: 200px;
+  height: auto;
+}
+
 .review-card {
   background: #111;
   padding: 20px;
@@ -336,3 +341,4 @@ h2 {
         flex-direction:column;
     }
 }
+
