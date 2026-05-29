@@ -48,8 +48,8 @@ const products = [
     ,
     {
         name: "футболка",
-        price: "2499 грн",
-        image: ".",
+        price: "1199 грн",
+        image: "./women.webp",
         category: 'women'
     }
     
