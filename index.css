@@ -161,14 +161,14 @@ h2 {
 
 .review-card img{
   width: 200px;
-  height: auto;
+  height: 50%;
 }
 
 .review-card {
   background: #111;
   padding: 20px;
   margin-bottom: 15px;
-  border-left: 3px solid #C9A96E;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
   border-radius: 5px;
   transition: 0.3s;
 }
@@ -342,3 +342,78 @@ h2 {
     }
 }
 
+/* Стиллі для відгуків */
+.reviews {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.reviews h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  height: 400px;
+
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgb(255, 255, 255);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.review-card p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.review-card span {
+  font-size: 14px;
+  color: #777;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #eee;
+}
+
+/* GRID LAYOUT */
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .reviews {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews {
+    grid-template-columns: 1fr;
+  }
+}
