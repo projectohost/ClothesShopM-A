@@ -18,17 +18,21 @@
             </nav>
 
             <div class="icons">
-                <!-- <span>🔍</span> -->
-                <span> <img class="chekuchka" src="./cart.png" alt="cart"> </span>
+                <span>
+                    <img class="chekuchka" src="./cart.png" alt="cart">
+                    <b id="cartCount">0</b>
+                </span>
             </div>
         </header>
 
         <section class="categories">
             <h2>Категорії</h2>
+
             <div class="grid">
-                <div>Жінкам</div>
-                <div>Чоловікам</div>
-                <div>дітям</div>
+                <button onclick="filterProducts('all')">Всі</button>
+                <button onclick="filterProducts('women')">Жінкам</button>
+                <button onclick="filterProducts('men')">Чоловікам</button>
+                <button onclick="filterProducts('kids')">Дітям</button>
             </div>
         </section>
 
